@@ -35,7 +35,7 @@ const Cards = () => {
         >
           <Heading size='md' p={4}><GiTeacher/>For Teachers</Heading>
           <Text p={4}>
-            Elevate your teaching experience with EasyED. Streamline lesson planning, track student progress, and engage with a collaborative network of educators for enhanced classroom success.
+            Elevat your teaching experience with EasyED. Streamline lesson planning, track student progress, and engage with a collaborative network of educators for enhanced classroom success.
           </Text>
         </Box>
         <Box
