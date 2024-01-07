@@ -20,7 +20,7 @@ const AddOrg = () => {
 
     try {
       // Replace 'your-api-endpoint' with your actual API endpoint
-      const response = await axios.post(`http://localhost:8000/admin/addorganisation`, {
+      const response = await axios.post(`https://api.easyeduverse.tech/admin/addorganisation`, {
         organisationname,
         address,
         city,
