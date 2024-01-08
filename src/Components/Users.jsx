@@ -8,6 +8,7 @@ import {
   Stack,
   StackDivider,
   Text,
+  useToast
 } from '@chakra-ui/react';
 import { CiStar } from 'react-icons/ci';
 import {
@@ -20,10 +21,11 @@ import {
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const toast = useToast();
 
   useEffect(() => {
     // Fetch data from your API endpoint
-    fetch('https://api.easyeduverse.tech/organisation/getuser', {
+    fetch(`${VITE_BASE_URI}/organisation/getuser`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -33,7 +35,15 @@ const Users = () => {
     })
       .then((response) => response.json())
       .then((data) => setUsers(data))
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => {
+        toast({
+          title: 'Error',
+          description: 'Error fetching user data',
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
+      });
   }, []);
 
 

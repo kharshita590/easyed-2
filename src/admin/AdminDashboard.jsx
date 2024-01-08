@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/admin", { replace: true });
+    navigate("/", { replace: true });
     localStorage.setItem("isAuthenticatedAdmin", JSON.stringify(false));
   }
 

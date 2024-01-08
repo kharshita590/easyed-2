@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardHeader, CardBody, Flex, Avatar, Box, Heading, Text, IconButton, Image } from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, Flex, Avatar, Box, Heading, Text, IconButton, Image, useToast } from '@chakra-ui/react';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 
 const Posts = () => {
   const [userData, setUserData] = useState(null);
-
+  const toast = useToast();
   useEffect(() => {
     // Fetch user data from the API
-    fetch('https://api.easyeduverse.tech/organisation/getpost',{
+    fetch(`${import.meta.env.VITE_BASE_URI}/organisation/getpost`,{
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -18,9 +18,17 @@ const Posts = () => {
       .then((response) => response.json())
       .then((data) => setUserData(data))
       
-      .catch((error) => console.error('Error fetching user data:', error));
+      .catch((error) => {
+        toast({
+          title: 'Error',
+          description: 'Error fetching user data',
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
+      });
   }, []); // Empty dependency array ensures the effect runs only once on mount
-  console.log(userData);
+  //console.log(userData);
   return (
     <div className='w-full h-screen bg-gray-300 flex items-center justify-center'>
       <div className='w-1/3 h-full overflow-y-scroll bg-white border-2 border-gray-400 flex-col justify-center items-center'>

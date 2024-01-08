@@ -20,7 +20,7 @@ const AddOrg = () => {
 
     try {
       // Replace 'your-api-endpoint' with your actual API endpoint
-      const response = await axios.post(`http://localhost:8000/admin/addorganisation`, {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URI}/admin/addorganisation`, {
         organisationname,
         address,
         city,
@@ -32,9 +32,9 @@ const AddOrg = () => {
       },
       { withCredentials: true }
             );
-            console.log(response);
+            //console.log(response);
 
-      console.log('Server response:', response.data);
+      //console.log('Server response:', response.data);
 
       // Reset form fields after a successful submission
       setOrganisationName('');
@@ -56,7 +56,13 @@ const AddOrg = () => {
       // Optionally, you can perform additional actions after a successful submission
       // For example, show a success message or redirect to another page
     } catch (error) {
-      console.error('Error submitting organization details:', error);
+      toast({
+        title: 'Error',
+        description: "Error Adding Organization",
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      })
 
       // Handle errors, show error messages, etc.
     }

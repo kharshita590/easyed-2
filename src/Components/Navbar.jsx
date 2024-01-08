@@ -17,13 +17,14 @@ const Navbar = () => {
     const [password, setPassword] = useState("");
     const toast = useToast();
     const navigate = useNavigate();
-
+    const backendUrl = import.meta.env.VITE_BASE_URI;
+    // console.log('import.meta.env:', import.meta.env);
+    // console.log('backendUrl:', backendUrl);
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        //console.log(backendUrl);
         try {
-            const response = await axios.post(
-                `https://api.easyeduverse.tech/organisation/login`,
+            const response = await axios.post(`${backendUrl}/organisation/login`,
                 {
                     email: username,
                     password: password,

@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useToast } from '@chakra-ui/react';
 
 const Admin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
+  const toast = useToast();
   const handleLogin = async (e) => {
     e.preventDefault(); // Move this line to the beginning
     try {
       // Replace 'your-api-endpoint' with your actual API endpoint
-      console.log("hello ji")
+      //console.log("hello ji")
       console.log(username)
-      const response = await axios.post(`https://api.easyeduverse.tech/admin/login`, {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URI}/admin/login`, {
         username: username,
         password: password,
       },
@@ -26,7 +27,14 @@ const Admin = () => {
       setPassword("");
     }
     catch (error) {
-      console.error('Error submitting organization details:', error);
+      //console.error('Error logging in', error);
+      toast({
+        title: 'Error',
+        description: "Error Logging In",
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      });
     }
   };
 
