@@ -13,6 +13,8 @@ const AddOrg = () => {
   const [isblocked, setIsBlocked] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [location, setLocation] = useState('')
+const [phonenumber, setPhonenumber] = useState('')
   const toast = useToast();
 
   const handleSubmit = async (e) => {
@@ -29,6 +31,8 @@ const AddOrg = () => {
         isblocked,
         email,
         password,
+        location,
+        phonenumber
       },
       { withCredentials: true }
             );
@@ -45,6 +49,8 @@ const AddOrg = () => {
       setIsBlocked(false);
       setEmail('');
       setPassword('');
+      setLocation('')
+      setPhonenumber('')
       toast({
         title: 'Successful!',
         description: "Organization Added Successfully",
@@ -126,6 +132,20 @@ const AddOrg = () => {
             Is Blocked
           </Checkbox>
 
+          <Input
+                      type="text"
+                      placeholder="Location"
+                      value={location}
+                      onChange={(e) => setLocation(e.target.value)}
+                      required
+                    />
+          <Input
+                      type="text"
+                      placeholder="Phone number"
+                      value={phonenumber}
+                      onChange={(e) => setPhonenumber(e.target.value)}
+                      required
+                    />
           {/* Email */}
           <Input
             type="email"
@@ -134,6 +154,7 @@ const AddOrg = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+
 
           {/* Password */}
           <Input
