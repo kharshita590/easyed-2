@@ -25,7 +25,7 @@ const Users = () => {
 
   useEffect(() => {
     // Fetch data from your API endpoint
-    fetch(`${VITE_BASE_URI}/organisation/getuser`, {
+    fetch(`${import.meta.env.VITE_BASE_URI}/organisation/getuser`, {
       method: 'GET',
       headers: {
         Accept: 'application/json',

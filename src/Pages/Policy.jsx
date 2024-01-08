@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
-import Sidebar from '../Components/Sidebar';
+//import Sidebar from '../Components/Sidebar';
 
 const Policy = () => {
   return (
@@ -8,7 +8,7 @@ const Policy = () => {
 
     <>
       <Navbar/>
-      <Sidebar/>
+      {/* <Sidebar/> */}
     
     <div className="container mx-auto mt-20 px-4">
       <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>

@@ -9,12 +9,12 @@ import SubscribeForm from '../Components/SubscribeForm';
 import Cards from '../Components/Cards';
 import "./Home.scss"
 import Navbar from '../Components/Navbar';
-import Sidebar from '../Components/Sidebar';
+//import Sidebar from '../Components/Sidebar';
 
 const Home = () => {
   return (
     <>
-    <Sidebar/>
+    {/* <Sidebar/> */}
     <Navbar />
     
     <div className="home">

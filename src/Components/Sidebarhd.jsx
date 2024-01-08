@@ -2,7 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
-import './Navbar.css';
+//import './Navbar.css';
+import './Sidebarhd.css';
 import { IconContext } from 'react-icons';
 // import { Button } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';

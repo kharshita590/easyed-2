@@ -3,14 +3,14 @@ import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Text, Button, I
 import contactus from "../assets/contactus.jpg"
 import logo from "../assets/logo.svg";
 import Navbar from '../Components/Navbar';
-import Sidebar from '../Components/Sidebar';
+//import Sidebar from '../Components/Sidebar';
 
 const Contact = () => {
   return (
 
     <>
     <Navbar/>
-    <Sidebar/>
+    {/* <Sidebar/> */}
     <div className='h-screen w-full bg-white relative flex items-center justify-center'>
     <div className='w-full bg-white h-screen flex items-center justify-center ml-7 mr-7'>
             <Card
