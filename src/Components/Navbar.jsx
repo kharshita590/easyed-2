@@ -44,6 +44,7 @@ const Navbar = () => {
             // Navigate to the dashboard
             //console.log('Before navigation');
             navigate('/dashboard', { replace: true });
+            window.location.href = "/dashboard";
             //console.log('After navigation');
 
             toast({

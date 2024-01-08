@@ -23,6 +23,7 @@ const Admin = () => {
       console.log(response);
       localStorage.setItem("isAuthenticatedAdmin", JSON.stringify(true));
       navigate('/admindashboard');
+      window.location.href = "/admindashboard";
       setUsername("");
       setPassword("");
     }
