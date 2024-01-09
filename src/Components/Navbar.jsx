@@ -128,6 +128,7 @@ const Navbar = () => {
                             </Link>
 
                             <Link to="/contactus" className="text-blue-600 hover:text-blue-900 m-4">Contact Us</Link>
+                            <Link to="/terms" className='text-blue-600 hover:text-blue-900 m-4'>Terms</Link>
                             <Link to="/policy" className="text-blue-600 hover:text-blue-900 ml-4">Policy</Link>
                         </div>
 
@@ -199,6 +200,7 @@ const Navbar = () => {
                             </Link>
 
                             <Link to="/contactus" className="text-blue-600 hover:text-blue-900">Contact Us</Link>
+                            <Link to="/terms" className='text-blue-600 hover:text-blue-900'>Terms</Link>
                             <Link to="/policy" className="text-blue-600 hover:text-blue-900">Policy</Link>
                         </div>
 

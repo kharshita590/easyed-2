@@ -10,6 +10,7 @@ import Admin from "./admin/Admin"
 import AdminDashboard from "./admin/AdminDashboard";
 import Posts from './Components/Posts';
 import Users from './Components/Users';
+import Terms from './Pages/Terms';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contactus" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/terms" element={<Terms />} />
         {isAuthenticatedAdmin ? (<Route path="/admindashboard" element={<AdminDashboard />} />) : (<Route path="/" element={<Home />} />)}
         {/* Conditionally render Dashboard if authenticated */}
         {isAuthenticated ? (
