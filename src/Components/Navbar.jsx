@@ -94,7 +94,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='fixed top-0 left-0 w-full bg-white shadow-md p-4 z-40 md:hidden'>
+            <nav className='fixed top-0 left-0 w-full bg-white shadow-md p-4 z-40 lg:hidden'>
                 <div className='container mx-auto'>
                     <div className='flex items-end justify-between'>
                         <img src={logo} alt='' />
@@ -187,7 +187,7 @@ const Navbar = () => {
 
 
 
-            <nav className="fixed top-0 left-0 w-full bg-white shadow-md p-4 z-40 md:block hidden">
+            <nav className="fixed top-0 left-0 w-full bg-white shadow-md p-4 z-40 lg:block hidden">
                 <div className="container mx-auto">
                     <div className="flex items-center justify-between">
                         <img src={logo} alt="" />
@@ -198,7 +198,7 @@ const Navbar = () => {
                                     Why us?
                                 </div>
                             </Link>
-
+                            <a href="https://play.google.com/store/apps/details?id=com.easyed&pcampaignid=web_share" className="text-blue-600 hover:text-blue-900" target='_blank'>Download Now</a>
                             <Link to="/contactus" className="text-blue-600 hover:text-blue-900">Contact Us</Link>
                             <Link to="/terms" className='text-blue-600 hover:text-blue-900'>Terms</Link>
                             <Link to="/policy" className="text-blue-600 hover:text-blue-900">Policy</Link>

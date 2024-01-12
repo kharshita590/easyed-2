@@ -14,7 +14,7 @@ import { IoMdExit } from "react-icons/io";
 
 const Sidebarhd = () => {
   const [sidebar, setSidebar] = useState(true);
-
+  // const [render1, setRender] = useState(true);
   const showSidebar = () => setSidebar(sidebar);
   const navigate = useNavigate();
 
@@ -22,7 +22,9 @@ const Sidebarhd = () => {
     navigate("/", {replace:true});
     localStorage.setItem("isAuthenticated", JSON.stringify(false));
   }
-
+  // const handleRender = () => {
+  //   setRender(!render1);
+  // }
   return (
     <>
       <IconContext.Provider value={{ color: '#000' }}>

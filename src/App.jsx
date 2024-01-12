@@ -11,7 +11,7 @@ import AdminDashboard from "./admin/AdminDashboard";
 import Posts from './Components/Posts';
 import Users from './Components/Users';
 import Terms from './Pages/Terms';
-
+import Creativity from './Components/Creativity';
 
 function App() {
   // Check if the user is authenticated
@@ -32,6 +32,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path='posts' element={<Posts />} />
             <Route path='users' element={<Users />} />
+            <Route path='creativity' element={<Creativity />} />
           </Route>
         ) : (
           // Redirect to home if not authenticated

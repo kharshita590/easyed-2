@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaList } from "react-icons/fa";
 import { PiStudentBold } from "react-icons/pi";
+import { SiSemanticscholar } from "react-icons/si";
 
 export const SidebarData = [
   
@@ -14,6 +15,12 @@ export const SidebarData = [
     title: "User's List",
     path: '/dashboard/users',
     icon: <FaList />,
+    cName: 'nav-text'
+  },
+  {
+    title: "Creativity",
+    path: '/dashboard/creativity',
+    icon: <SiSemanticscholar />,
     cName: 'nav-text'
   }
 ];

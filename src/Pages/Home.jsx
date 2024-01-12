@@ -19,6 +19,7 @@ const Home = () => {
     
     <div className="home">
       <img src={Homeimg} className="bg" alt="" />
+      {/* <div className=''>Download on Google Playstore</div> */}
       <div className="compo flex items-center justify-center">
         <img src={comp} alt="" className="max-w-full h-auto " />
       </div>
