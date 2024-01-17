@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contactus" element={<Contact />} />
-        <Route path="/policy" element={<Policy />} />
+        <Route path="/privacy-policy" element={<Policy />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/terms" element={<Terms />} />
         {isAuthenticatedAdmin ? (<Route path="/admindashboard" element={<AdminDashboard />} />) : (<Route path="/" element={<Home />} />)}

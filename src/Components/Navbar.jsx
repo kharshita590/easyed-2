@@ -129,7 +129,7 @@ const Navbar = () => {
 
                             <Link to="/contactus" className="text-blue-600 hover:text-blue-900 m-4">Contact Us</Link>
                             <Link to="/terms" className='text-blue-600 hover:text-blue-900 m-4'>Terms</Link>
-                            <Link to="/policy" className="text-blue-600 hover:text-blue-900 ml-4">Policy</Link>
+                            <Link to="/privacy-policy" className="text-blue-600 hover:text-blue-900 ml-4">Privacy Policy</Link>
                         </div>
 
                         <button onClick={onOpen} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800 m-6 ml-10">Login</button>
@@ -201,7 +201,7 @@ const Navbar = () => {
                             <a href="https://play.google.com/store/apps/details?id=com.easyed&pcampaignid=web_share" className="text-blue-600 hover:text-blue-900" target='_blank'>Download Now</a>
                             <Link to="/contactus" className="text-blue-600 hover:text-blue-900">Contact Us</Link>
                             <Link to="/terms" className='text-blue-600 hover:text-blue-900'>Terms</Link>
-                            <Link to="/policy" className="text-blue-600 hover:text-blue-900">Policy</Link>
+                            <Link to="/privacy-policy" className="text-blue-600 hover:text-blue-900 ml-4">Privacy Policy</Link>
                         </div>
 
                         <button onClick={onOpen} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800">Login</button>
