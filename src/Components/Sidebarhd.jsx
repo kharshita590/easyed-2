@@ -25,13 +25,16 @@ const Sidebarhd = () => {
   // const handleRender = () => {
   //   setRender(!render1);
   // }
+  const handledash = () => {
+    navigate("/dashboard/", {replace:true});
+  }
   return (
     <>
       <IconContext.Provider value={{ color: '#000' }}>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items'>
             <li className='navbar-toggle'>
-              <img src={logo} alt="" className='ml-6'/>
+              <img src={logo} alt="" className='ml-6 cursor-pointer' onClick={handledash}/>
             </li>
             {SidebarData.map((item, index) => {
               return (

@@ -10,7 +10,7 @@ const Dashboard = () => {
   const location = useLocation();
 
   // Check if the current route is a child of /dashboard
-  const isDashboardRoute = location.pathname==='/dashboard';
+  const isDashboardRoute = (location.pathname==='/dashboard') || (location.pathname==='/dashboard/');
 
   return (
     <>
