@@ -16,7 +16,7 @@ const Creativity = () => {
             <h1 className='mb-2'>Step 5: Teachers should have questions to solve which students should implement topic knowledge.</h1>
         </div>
         <div className='text-xl font-normal rounded-lg border-2 w-36 h-10 mt-10'> <h1 className='ml-2'>Reference</h1></div>
-        <a href="https://www.youtube.com/watch?v=uzu9RY4tP-A" className='mt-3 ml-10 font-semibold hover:text-blue-600'>Watch the video</a>
+        <a href="https://www.youtube.com/watch?v=uzu9RY4tP-A" target='_blank' className='mt-3 ml-10 font-semibold hover:text-blue-600'>Watch the video</a>
     </div>
     </>
   );
