@@ -4,7 +4,7 @@ import Sidebarhd from '../Components/Sidebarhd';
 import ai from "../assets/ai.jpeg";
 import vp from "../assets/vp.jpeg";
 import invest from "../assets/invest.jpg";
-
+import  Graph  from '../Components/Graph';
 const Dashboard = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -20,7 +20,7 @@ const Dashboard = () => {
           <div className='flex flex-col justify-center items-center mt-20 text-3xl font-semibold italic mb-16'>
             JOIN THE START OF A REVOLUTION
           </div>
-          <div className='w-7/12 mb-44 mt-5'>
+          <div className='w-7/12 h-1/5 mt-5'>
             {/* Trending Section */}
             <h1 className='text-lg font-medium mb-5'>TRENDING</h1>
             <div className='flex flex-row ml-12'>
@@ -54,16 +54,17 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className='w-7/12'>
+          <div className='w-7/12 mt-5'>
             {/* Analysis Section */}
             <h1 className='text-lg font-medium mb-5'>ANALYSIS</h1>
-            <div className='flex border-2 border-gray-300 rounded-lg h-40 ml-12 mr-10 justify-center items-center '>
-              <p className='ml-5 mr-5 text-lg'>
+            <div className='h-64 ml-12 mr-10 justify-center items-center '>
+              {/* <p className='ml-5 mr-5 text-lg'>
                 Basic math is required in 94 percent of Jobs directly or indirectly.
                 Creativity is already climbing the charts of trending skills.
                 Problem solving is already a skill required in almost every profession.
                 Computer skill has become an essential part of everyone's life.
-              </p>
+              </p> */}
+              <Graph />
             </div>
           </div>
       </div>

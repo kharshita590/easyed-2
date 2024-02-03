@@ -7,9 +7,10 @@ const Posts = () => {
   const [showFullTextMap, setShowFullTextMap] = useState({});
   const toast = useToast();
 
-  useEffect(() => {
+  useEffect(async () => {
     // Fetch user data from the API
-    fetch(`${import.meta.env.VITE_BASE_URI}/organisation/getpost`, {
+    try{
+    await fetch(`${import.meta.env.VITE_BASE_URI}/organisation/getpost`, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -19,7 +20,7 @@ const Posts = () => {
     })
       .then((response) => response.json())
       .then((data) => setUserData(data))
-      .catch((error) => {
+  }catch(error){
         toast({
           title: 'Error',
           description: 'Error fetching user data',
@@ -27,7 +28,7 @@ const Posts = () => {
           duration: 3000,
           isClosable: true,
         });
-      });
+      };
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   const toggleFullText = (postIndex) => {

@@ -25,6 +25,7 @@ const Users = () => {
 
   useEffect(() => {
     // Fetch data from your API endpoint
+    try{
     fetch(`${import.meta.env.VITE_BASE_URI}/organisation/getuser`, {
       method: 'GET',
       headers: {
@@ -35,7 +36,7 @@ const Users = () => {
     })
       .then((response) => response.json())
       .then((data) => setUsers(data))
-      .catch((error) => {
+  }catch(error) {
         toast({
           title: 'Error',
           description: 'Error fetching user data',
@@ -43,7 +44,7 @@ const Users = () => {
           duration: 3000,
           isClosable: true,
         })
-      });
+      };
   }, []);
 
 
@@ -58,7 +59,7 @@ const Users = () => {
 
           <CardBody>
             <Stack divider={<StackDivider />} spacing='4'>
-              {users.map((user, index) => (
+            {Array.isArray(users) && users.map((user, index) => (
                 <Box key={index}>
                   <Accordion defaultIndex={[0]} allowMultiple>
                     <AccordionItem>

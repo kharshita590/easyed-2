@@ -113,7 +113,7 @@ const Navbar = () => {
                 </div>
             </nav>
             {isSidebarOpen && (
-                <div className='fixed top-0 right-0 h-full w-54 bg-white z-40 p-4 transition-transform transform translate-x-0 md:hidden duration-300 ease-in-out'>
+                <div className='fixed top-0 right-0 h-full w-54 bg-white z-40 p-4 transition-transform transform translate-x-0 duration-300 ease-in-out'>
                     <RxCross1
                         onClick={toggleSidebar}
                         className='hover:cursor-pointer transition-transform transform scale-125 duration-300 ease-in-out m-4'
