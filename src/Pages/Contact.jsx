@@ -4,6 +4,7 @@ import contactus from "../assets/contactus.jpg"
 import logo from "../assets/logo.svg";
 import Navbar from '../Components/Navbar';
 //import Sidebar from '../Components/Sidebar';
+import Footer from '../Components/Footer';
 
 const Contact = () => {
   return (
@@ -47,6 +48,7 @@ const Contact = () => {
         </Stack>
         </Card>
     </div>
+    <Footer/>
 </div>
 </>
   )

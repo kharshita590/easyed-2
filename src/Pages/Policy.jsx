@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 //import Sidebar from '../Components/Sidebar';
+import Footer from '../Components/Footer';
 
 const Policy = () => {
   return (
@@ -10,7 +11,7 @@ const Policy = () => {
       <Navbar />
       {/* <Sidebar/> */}
 
-      <div className="container mx-auto mt-20 px-4">
+      <div className="container mx-2">
         <p>
           These Terms of Service were last updated on 16 January 2024.
           We at Easyed Eduverse Private Limited, its affiliates, subsidiaries, successors in interest, (Company, we, our, us ), own, manage, and operate the application Easyed (as defined below and referred to as Application). The Company provides you with the Application, the associated customized services which include but are not limited to providing you with a educational social media platform, provision of content, and access to content which is created and uploaded by users on the Application (as defined below and referred to as Content) as sought to be accessed by you (Services). These Terms of Services (Terms) govern your access to and use of our Services, which includes the website, the associated mobile application, SMS, APIs, e-mail notifications, and any Content available on the Services in whichever form and format capable of communication.
@@ -206,6 +207,7 @@ const Policy = () => {
           <p>
           We may from time to time change these Terms of Service. We may assign or transfer our agreement with you including our associated rights and obligations at any time and you agree to cooperate with us in connection with such an assignment or transfer. We recommend that you periodically check this page for any revised terms. Your continued use of the Services will be deemed to constitute your acceptance of all such revised terms. You may request for earlier versions of these Terms by writing to info@easyeduverse.com.
         </p>
+        <Footer />
       </div>
     </>
   );

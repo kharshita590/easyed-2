@@ -50,6 +50,18 @@ const Cards = () => {
             Transform your institution with EasyED. Manage student data, streamline administrative tasks, and foster a dynamic learning environment that promotes academic excellence.
           </Text>
         </Box>
+        <Box
+          border="1px solid #A1AEBF"
+          borderRadius="md"
+          width={['100%', '100%', '300px']}
+          minHeight="300px"
+          _hover={{ backgroundColor: '#446EEB', color: 'white', transition: 'background-color 0.3s ease-in-out' }}
+        >
+          <Heading size='md' p={4}><IoIosSchool/>For Parents</Heading>
+          <Text p={4}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis sint saepe tenetur voluptates aperiam velit tempore placeat eaque quasi culpa facere quaerat aut, quos pariatur aliquid delectus, mollitia quia.
+          </Text>
+        </Box>
       </Flex>
     </ChakraProvider>
   );

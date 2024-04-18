@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer';
 const Terms = () => {
     return (
         <>
             <Navbar />
-            <div className="container mx-auto p-8 mt-10">
+            <div className="container mx-2">
                 <h1 className="text-3xl font-bold mb-4">Terms & Conditions</h1>
                 <p className="mb-4">Last updated on 09-01-2024 15:37:07</p>
 
@@ -74,6 +75,7 @@ const Terms = () => {
                         {/* Add more list items as needed */}
                     </ul>
                 </section>
+                <Footer />
             </div>
         </>
     );

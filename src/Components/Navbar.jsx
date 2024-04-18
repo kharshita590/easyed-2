@@ -8,6 +8,20 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { useState, useEffect } from 'react';
 import { useToast } from '@chakra-ui/react';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
+import { MdMenuOpen } from "react-icons/md";
+import playstore from "../assets/playstore.svg";
+import { CiHome } from "react-icons/ci";
+import { CiLogin } from "react-icons/ci";
+import { MdContactSupport } from "react-icons/md";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
+
+import {
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    IconButton,
+  } from '@chakra-ui/react'
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -72,21 +86,21 @@ const Navbar = () => {
 
 
 
-    const [isSidebarOpen, setSidebarOpen] = useState(false);
+    // const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-    const toggleSidebar = () => {
-        setSidebarOpen(!isSidebarOpen);
-    };
+    // const toggleSidebar = () => {
+    //     setSidebarOpen(!isSidebarOpen);
+    // };
 
 
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
+    // const scrollToSection = (sectionId) => {
+    //     const section = document.getElementById(sectionId);
+    //     if (section) {
+    //         section.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    // }
 
-    const Admin = () =>{
+    const Admin = () => {
         navigate("/admin", { replace: true });
     }
 
@@ -94,7 +108,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='fixed top-0 left-0 w-full bg-white shadow-md p-4 z-40 lg:hidden'>
+            {/* <nav className='fixed top-0 left-0 w-full bg-white shadow-md p-4 z-40 lg:hidden'>
                 <div className='container mx-auto'>
                     <div className='flex items-end justify-between'>
                         <img src={logo} alt='' />
@@ -177,78 +191,117 @@ const Navbar = () => {
                     </div>
                 </div>
 
-            )}
+            )} */}
+
+
+            {/* for smaller screens */}
+            <div className='flex justify-center w-full z-40 fixed mt-6'>
+                <nav className='lg:hidden top-0 left-0 w-5/6 shadow-md p-4 bg-white rounded-full'>
+                    <div className="container mx-auto">
+                        <div className="flex items-center justify-between">
+                            <img src={logo} alt="" />
+                            <div className=''>
+                                <Menu>
+                                    <MenuButton
+                                        as={IconButton}
+                                        aria-label='Options'
+                                        icon={<MdMenuOpen />}
+                                        variant='outline'
+                                    />
+                                    <MenuList>
+                                    <Link to="/" className="text-black hover:text-blue-800"><MenuItem icon={<CiHome />} command=''>
+                                            Home
+                                        </MenuItem></Link>
+                                        <p className='cursor-pointer font-bold text-blue-600 hover:text-black' onClick={onOpen}><MenuItem icon={<CiLogin />} command=''>
+                                            Login
+                                        </MenuItem></p>
+                                        <Link to="/contactus" className="text-black hover:text-blue-800"><MenuItem icon={<MdContactSupport />} command=''>
+                                            Contact Us
+                                        </MenuItem></Link>
+                                        <a href="https://play.google.com/store/apps/details?id=com.easyed&pcampaignid=web_share" className="hover:animate-bounce transition" target='_blank'><MenuItem icon={<IoLogoGooglePlaystore />} command=''>
+                                            Download the App
+                                        </MenuItem></a>
+                                    </MenuList>
+                                </Menu>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </nav>
+            </div>
 
 
 
 
 
 
-
-
-
-            <nav className="fixed top-0 left-0 w-full bg-white shadow-md p-4 z-40 lg:block hidden">
-                <div className="container mx-auto">
-                    <div className="flex items-center justify-between">
-                        <img src={logo} alt="" />
-                        <div className="flex space-x-4 gap-6">
-                            <Link to="/" className="text-blue-600 hover:text-blue-900">Home</Link>
-                            <Link to="/">
+            <div className='flex justify-center w-full z-40 fixed mt-6'>
+                <nav className={`top-0 left-0 w-5/6 shadow-md p-4 lg:block hidden bg-white rounded-full opacity-60 hover:opacity-100 transition-colors duration-200`}>
+                    <div className="container mx-auto">
+                        <div className="flex items-center justify-between">
+                            <img src={logo} alt="" />
+                            <div className="flex space-x-4 gap-6 flex-row items-center">
+                                <Link to="/" className="text-black hover:text-blue-800">Home</Link>
+                                <Link to="/contactus" className="text-black hover:text-blue-800">Contact Us</Link>
+                                <Link to="/terms" className='text-black hover:text-blue-800'>Terms</Link>
+                                <Link to="/privacy-policy" className="text-black hover:text-blue-800 ml-4">Privacy Policy</Link>
+                                <p className='cursor-pointer font-bold text-blue-600 hover:text-black' onClick={onOpen}>Login</p>
+                                {/* <Link to="/">
                                 <div onClick={() => scrollToSection('whyus')} className="text-blue-600 hover:text-blue-900">
                                     Why us?
                                 </div>
-                            </Link>
-                            <a href="https://play.google.com/store/apps/details?id=com.easyed&pcampaignid=web_share" className="text-blue-600 hover:text-blue-900" target='_blank'>Download Now</a>
-                            <Link to="/contactus" className="text-blue-600 hover:text-blue-900">Contact Us</Link>
-                            <Link to="/terms" className='text-blue-600 hover:text-blue-900'>Terms</Link>
-                            <Link to="/privacy-policy" className="text-blue-600 hover:text-blue-900 ml-4">Privacy Policy</Link>
+                            </Link> */}
+                                <a href="https://play.google.com/store/apps/details?id=com.easyed&pcampaignid=web_share" className="hover:animate-bounce transition" target='_blank'><img className='' src={playstore} alt="" /></a>
+
+
+                            </div>
+
+                            {/* <button onClick={onOpen} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800">Login</button> */}
+
+                            <Modal
+                                initialFocusRef={initialRef}
+                                finalFocusRef={finalRef}
+                                isOpen={isOpen}
+                                onClose={onClose}
+                                className="m-4"
+                            >
+                                <ModalOverlay />
+                                <form onSubmit={handleSubmit} method="POST">
+                                    <ModalContent>
+                                        <ModalHeader>Login</ModalHeader>
+                                        <ModalCloseButton />
+                                        <ModalBody pb={6}>
+                                            <Stack spacing={4}>
+                                                <InputGroup>
+                                                    <InputLeftElement pointerEvents="none">
+                                                        <CgOrganisation />
+                                                    </InputLeftElement>
+                                                    <Input type="username" name="userID" placeholder="Organisation UserID" value={username} onChange={(e) => setid(e.target.value)} required />
+                                                </InputGroup>
+
+                                                <InputGroup>
+                                                    <InputLeftElement pointerEvents="none">
+                                                        <RiLockPasswordLine />
+                                                    </InputLeftElement>
+                                                    <Input type="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                                                </InputGroup>
+                                            </Stack>
+                                        </ModalBody>
+
+                                        <ModalFooter>
+                                            <Button colorScheme="blue" mr={3} type="submit">
+                                                Login
+                                            </Button>
+                                            <Button onClick={onClose} mr={3}>Cancel</Button>
+                                            <Button onClick={Admin}>Admin?</Button>
+                                        </ModalFooter>
+                                    </ModalContent>
+                                </form>
+                            </Modal>
                         </div>
-
-                        <button onClick={onOpen} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800">Login</button>
-
-                        <Modal
-                            initialFocusRef={initialRef}
-                            finalFocusRef={finalRef}
-                            isOpen={isOpen}
-                            onClose={onClose}
-                            className="m-4"
-                        >
-                            <ModalOverlay />
-                            <form onSubmit={handleSubmit} method="POST">
-                                <ModalContent>
-                                    <ModalHeader>Login</ModalHeader>
-                                    <ModalCloseButton />
-                                    <ModalBody pb={6}>
-                                        <Stack spacing={4}>
-                                            <InputGroup>
-                                                <InputLeftElement pointerEvents="none">
-                                                    <CgOrganisation />
-                                                </InputLeftElement>
-                                                <Input type="username" name="userID" placeholder="Organisation UserID" value={username} onChange={(e) => setid(e.target.value)} required />
-                                            </InputGroup>
-
-                                            <InputGroup>
-                                                <InputLeftElement pointerEvents="none">
-                                                    <RiLockPasswordLine />
-                                                </InputLeftElement>
-                                                <Input type="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                                            </InputGroup>
-                                        </Stack>
-                                    </ModalBody>
-
-                                    <ModalFooter>
-                                        <Button colorScheme="blue" mr={3} type="submit">
-                                            Login
-                                        </Button>
-                                        <Button onClick={onClose} mr={3}>Cancel</Button>
-                                        <Button onClick={Admin}>Admin?</Button>
-                                    </ModalFooter>
-                                </ModalContent>
-                            </form>
-                        </Modal>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </>
     );
 };
