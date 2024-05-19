@@ -44,7 +44,7 @@ const BarGraph=()=>{
           options={{
             plugins: {
               title: {
-                text: "Revenue Source",
+                text: "",
               },
             },
           }}
