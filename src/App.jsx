@@ -11,6 +11,8 @@ import AdminDashboard from "./admin/AdminDashboard";
 import Posts from './Components/Posts';
 import Users from './Components/Users';
 import Terms from './Pages/Terms';
+import Details from './Components/table';
+import Profile from './Components/profile';
 import Creativity from './Components/Creativity';
 
 function App() {
@@ -26,18 +28,22 @@ function App() {
         <Route path="/privacy-policy" element={<Policy />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/terms" element={<Terms />} />
-        {isAuthenticatedAdmin ? (<Route path="/admindashboard" element={<AdminDashboard />} />) : (<Route path="/" element={<Home />} />)}
+        <Route path ='profile' element={<Profile/>}/>
+        {/* {isAuthenticatedAdmin ?  */}
+        (<Route path="/admindashboard" element={<AdminDashboard />} />) 
+        {/* : (<Route path="/" element={<Home />} />) */}
         {/* Conditionally render Dashboard if authenticated */}
-        {isAuthenticated ? (
+        {/* {isAuthenticated ? ( */}
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path='posts' element={<Posts />} />
             <Route path='users' element={<Users />} />
+            {/* <Route path ='profile' element={<Profile/>}/> */}
             <Route path='creativity' element={<Creativity />} />
           </Route>
-        ) : (
-          // Redirect to home if not authenticated
+        {/* ) : ( */}
+          {/* // Redirect to home if not authenticated
           <Route path="*" element={<Home />} />
-        )}
+        )} */}
       </Routes>
     </Router>
   );

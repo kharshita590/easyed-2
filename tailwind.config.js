@@ -5,8 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '34': '34px',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.placeholder-ml-34::placeholder': {
+          marginLeft: '34px',
+        },
+      });
+    },
+  ],
 }
 

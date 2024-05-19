@@ -1,0 +1,42 @@
+[
+    {
+      "label": "Development",
+      "value": 40
+    },
+    {
+      "label": "Photoshop",
+      "value": 88
+    },
+    {
+      "label": "Figma",
+      "value": 60
+    },
+    {
+        "label": "Java",
+        "value": 47
+      },
+      {
+        "label": "MongoDB",
+        "value": 45
+      },
+      {
+        "label": "illustrator",
+        "value": 49
+      },
+      {
+        "label": "Blockchain",
+        "value": 88
+      },
+      {
+        "label": "Speaking",
+        "value": 46
+      },
+      {
+        "label": "Marketing",
+        "value": 46
+      },
+      {
+        "label": "Not Sure",
+        "value": 2
+      }
+  ]
