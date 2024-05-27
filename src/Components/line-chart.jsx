@@ -3,7 +3,7 @@ import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 import './sidebar2.css';
 import { Progress } from '@chakra-ui/react'
-import revenueData from "../Components/data/sourceData.json";
+import dummyData from "../Components/data/dummyData.json";
 
 const LineChart = () => {
   return (
@@ -13,17 +13,17 @@ const LineChart = () => {
         <h1>Trending Skills</h1>
         <Line
           data={{
-            labels: revenueData.map((data) => data.label),
+            labels: dummyData.map((data) => data.label),
             datasets: [
               {
                 label: "",
-                data: revenueData.map((data) => data.revenue),
+                data: dummyData.map((data) => data.revenue),
                 backgroundColor: "#8968CD",
                 borderColor: "#8968CD",
               },
               {
                 label: "",
-                data: revenueData.map((data) => data.cost),
+                data: dummyData.map((data) => data.cost),
                 backgroundColor: "#E6E6FA",
                 borderColor: "#E6E6FA",
               },

@@ -28,7 +28,7 @@ const Profile = () => {
             <Nav />
             <div className=' mt-[7rem] ml-[20rem]'>
                 <div className='border mb-4 p-4'>
-                <p className='text-lg text-white'>Student Profile</p>
+                <p className='text-lg font-bold text-black'>Student Profile</p>
                 <div className='flex'>
                     <div className=''>
                         <img src='dummy.png ' class="w-20 h-20 object-cover ml-[4rem] mt-[2rem]"></img>

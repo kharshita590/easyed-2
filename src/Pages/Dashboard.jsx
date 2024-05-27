@@ -4,7 +4,7 @@ import Sidebar2 from '../Components/sidebar2';
 import Nav from '../Components/navbar2';
 import BarGraph from "../Components/Bar-graph";
 import LineChart from "../Components/line-chart";
-
+import MarketTrends from '../Components/trends';
 const Dashboard = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,6 +19,7 @@ const Dashboard = () => {
     <Nav/>
     <BarGraph/>
     <LineChart/>
+    <MarketTrends/>
 
     </>
   //   // <>

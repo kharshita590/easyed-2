@@ -11,9 +11,9 @@ import AdminDashboard from "./admin/AdminDashboard";
 import Posts from './Components/Posts';
 import Users from './Components/Users';
 import Terms from './Pages/Terms';
-import Details from './Components/table';
 import Profile from './Components/profile';
 import Creativity from './Components/Creativity';
+import Table from './Components/table';
 
 function App() {
   // Check if the user is authenticated
@@ -29,6 +29,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/terms" element={<Terms />} />
         <Route path ='profile' element={<Profile/>}/>
+        <Route path ='table' element={<Table/>}/>
         {/* {isAuthenticatedAdmin ?  */}
         (<Route path="/admindashboard" element={<AdminDashboard />} />) 
         {/* : (<Route path="/" element={<Home />} />) */}

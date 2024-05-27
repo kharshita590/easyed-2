@@ -2,7 +2,7 @@ import React from "react";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import './sidebar2.css';
-import sourceData from "../Components/data/revenuData.json"
+import skillData from "../Components/data/skillData.json"
 const BarGraph=()=>{
     return (
       <> 
@@ -19,11 +19,11 @@ const BarGraph=()=>{
        
        <Bar
           data={{
-            labels: sourceData.map((data) => data.label),
+            labels: skillData.map((data) => data.label),
             datasets: [
               {
                 label: "",
-                data: sourceData.map((data) => data.value),
+                data: skillData.map((data) => data.value),
                 backgroundColor: [
                     "rgba(148, 0, 211, 0.8)",
                     "rgba(255, 165, 0, 0.8)",

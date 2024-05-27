@@ -33,7 +33,7 @@ const UserActivity = () => {
 
   return (
     <div className="p-4 mt-[2rem]">
-      <h2 className="text-xl font-bold mb-4 text-white ">User Activity</h2>
+      <h2 className="text-xl font-bold mb-4 text-black ">User Activity</h2>
       {activities.map(activity => (
         <div key={activity.id} className="border rounded-lg p-4 mb-4 shadow-md">
           <div className="flex items-center mb-2">
@@ -48,7 +48,7 @@ const UserActivity = () => {
             </div>
           </div>
           <p className="mb-2">{activity.content}</p>
-          <div className="flex justify-between text-sm text-white">
+          <div className="flex justify-between text-sm text-black">
             <div>Views: {activity.views}</div>
             <div>Likes: {activity.likes}</div>
             <div>Shares: {activity.shares}</div>

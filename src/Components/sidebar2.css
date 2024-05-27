@@ -35,8 +35,9 @@
   
   .nav-text a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-size: 18px;
+    
     width: 95%;
     height: 100%;
     display: flex;
@@ -47,7 +48,7 @@
   }
   
   .nav-text a:hover {
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(188, 188, 188);
   }
   
   .nav-menu-items {
@@ -75,7 +76,7 @@
   
   .logout-button {
     background-color: #64748b;
-    color: white;
+    color: #000000;
     padding: 0.5rem;
     font-size: 17px;
     margin-left: 2rem;
@@ -87,7 +88,7 @@
   }
   
   .logout-button:hover {
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(83, 83, 83);
   }
   
   .icon {
@@ -98,7 +99,7 @@
     padding-top: 0.9rem;
   }
   .setting-button{
-      color: white;
+      color: #000000;
       padding: 0.5rem;
       margin-left: 2rem;
       display: flex;
@@ -108,7 +109,7 @@
       transition: background-color 0.3s ease;
   }
   .setting-button:hover {
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(103, 103, 103);
   }
 
   .nav input{
@@ -134,7 +135,7 @@
    margin-top: 4rem;
 }
 .dataCard .top h1{
-  color: #ffffff;
+  color: #000000;
  font-weight: bolder;
  font-size: 15pt;
  font-family:Arial, Helvetica, sans-serif;
@@ -143,10 +144,10 @@
   width: 7rem;
   height: 2.5rem;
   font-size: 13pt;
-  color: #ffffff;
+  color: #000000;
   font-weight: bolder;
   border-radius: 5px;
-  border: solid #fff 2px;
+  border: solid #000000 2px;
 
 }
 .dataCard .top .side .export{
@@ -154,8 +155,8 @@
   height: 2.2rem;
   font-size: 10pt;
   border-radius: 5px;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
   margin-left: 2rem;
   margin-top: 4px;
   
@@ -172,14 +173,14 @@
   border: 1px solid white;
 }
 .card .lineCard h1{
-  color: #ffffff;
+  color: #000000;
   font-weight: bolder;
   font-size: 15pt;
   margin-left: 2rem;
   font-family:Arial, Helvetica, sans-serif;
 }
 .progress h1{
-  color: #ffffff;
+  color: #000000;
   font-weight: bolder;
   font-size: 15pt;
   
